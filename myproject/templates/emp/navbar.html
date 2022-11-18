@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #f7f7f9; box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;">
+  <div class="container-fluid">
+    <a class="navbar-brand alert-success" href="#" style="font-weight:700;color: #155724;">Emp Management</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- <p>{{value}}</p> -->
+        <li class="nav-item">
+          {% if value == "home" %}
+          <a class="nav-link active" aria-current="page" href="/emp/home">Home</a>
+          {% else %}
+          <a class="nav-link" aria-current="page" href="/emp/home">Home</a>
+          {% endif %}
+          
+        </li>
+        <li class="nav-item">
+          {% if value == "add_emp" %}
+          <a class="nav-link active" href="/emp/add-emp">Add Employee</a>
+          {% else %}
+          <a class="nav-link" href="/emp/add-emp">Add Employee</a>
+          {% endif %}
+        </li>
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">View Employee</a></li>
+            <li><a class="dropdown-item" href="#">About</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Follow</a></li>
+          </ul> -->
+          <li class="nav-item">
+            {% if value == "testi" %}
+            <a class="nav-link active" href="/emp/testimonials/">Testimonials</a>
+            {% else %}
+            <a class="nav-link" href="/emp/testimonials/">Testimonials</a>
+            {% endif %}
+            
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="/emp/feedback/">Feedback</a>
+          </li> -->
+        <!-- </li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+<style>
+  .nav-link.active{
+    color: #155724 !important;
+  }
+  .nav-link{
+    font-weight: 400 !important;
+  }
+  </style>
